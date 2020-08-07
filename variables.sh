@@ -84,7 +84,7 @@ MACADDRACL='0'
 # B. Interface names might be unpredictable in the future as has happened with other distros.
 INTERFACEAP='wlan0'
 # Below variable used in "firewall_ipv4.sh" script
-INTERFACEMASQUERADED='eth0'
+INTERFACEMASQUERADED='eth1'
 
 ### dhcpcd.conf Variables
 # default: 12h

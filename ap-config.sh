@@ -22,7 +22,7 @@ source "${BASH_SOURCE%/*}/functions.sh"
 # variables below self-populate and are ONLY called in this file to supply values to directives in /etc/dnsmasq.conf
 # These live outside centralized location "variables.sh" as they require script "packages.sh" to have already executed to install dependency pkg "sipcalc"
 
-IPV4IPETH0="$(ip addr list|grep eth0|awk 'FNR==2'| awk '{print $2}')"
+IPV4IPETH0="$(ip addr list|grep eth1|awk 'FNR==2'| awk '{print $2}')"
 IPV6IPWLAN0="$(ip -6 addr|awk '{print $2}'|grep -P '^(?!fe80)[[:alnum:]]{4}:.*/64'|cut -d '/' -f1)"
 IPV4GWWLAN0="$(ip route | grep default | grep wlan0 | awk '{print $3}')"
 

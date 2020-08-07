@@ -1,4 +1,4 @@
-\#
+ \#
 
 \# pi-ap:	These scripts configure a Raspberry Pi into a wireless Access Point
 
@@ -121,7 +121,7 @@ I discuss POE gear and perform a ***cost*** vs. ***benefit*** analysis at below 
 **Hardware Configuration**:
 ---
 
-- Connect the Pi's `eth0` port to a DHCP-enabled port in a router configured with Internet connection or a switch connected to this router.
+- Connect the Pi's `eth1` port to a DHCP-enabled port in a router configured with Internet connection or a switch connected to this router.
 
 NOTE: You can connect a "***pi-ap**" to some intermediate router but you will of course have to configure the routing so the Pi can reach the router with the Internet connection.
 
@@ -171,7 +171,7 @@ A suggested _non-exhausitive_ list of things to investigate if ***pi-ap*** broke
 
 - **FW In Front of Pi Not Blocking**: Look for restrictive rules on any FW's in front of the pi-ap
 
-- ***ip addr list***: Check interfaces are all up. ***wlan0*** must be up to connect to AP. ***eth0*** must be up for AP traffic to reach Internet
+- ***ip addr list***: Check interfaces are all up. ***wlan0*** must be up to connect to AP. ***eth1*** must be up for AP traffic to reach Internet
 
 - ***sudo systemctl status hostapd.service***: When ***hostapd*** is not happy, your AP will be down.
 

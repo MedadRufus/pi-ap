@@ -32,10 +32,10 @@ read -p "Press ENTER to accept GPL v3 license terms to continue or terminate thi
 
 
 # Check for a router uplink on the Pi:
-if [[ $(ip addr list|grep eth0|grep 'NO-CARRIER') != '' ]]; then
+if [[ $(ip addr list|grep eth1|grep 'NO-CARRIER') != '' ]]; then
 
         echo
-        echo 'No Router Uplink Connected to Raspberry Pi eth0 interface'
+        echo 'No Router Uplink Connected to Raspberry Pi eth1 interface'
         echo
         echo 'Please connect and re-execute this install script; EXITING'
         echo

@@ -15,9 +15,9 @@ source "${BASH_SOURCE%/*}/variables.sh"
 source "${BASH_SOURCE%/*}/functions.sh"
 
 
-# Below variables can be used to specify the subnetting of the eth0 interface in UFW rules or elsewhere
-IPV4IPETH0="$(ip addr list|grep 'eth0'|awk 'FNR==2'|awk '{print $2}'|cut -d '/' -f1)"
-IPV4SUBNETMASKETH0="$(ip addr list|grep 'eth0'|awk 'FNR==2'|awk '{print $2}'|cut -d '/' -f2)"
+# Below variables can be used to specify the subnetting of the eth1 interface in UFW rules or elsewhere
+IPV4IPETH0="$(ip addr list|grep 'eth1'|awk 'FNR==2'|awk '{print $2}'|cut -d '/' -f1)"
+IPV4SUBNETMASKETH0="$(ip addr list|grep 'eth1'|awk 'FNR==2'|awk '{print $2}'|cut -d '/' -f2)"
 IPV4SUBNETETH0="$(sipcalc $IPV4IPETH0/$IPV4SUBNETMASKETH0|awk 'FNR==7'|awk '{print $4}')/$IPV4SUBNETMASKETH0"
 
 
